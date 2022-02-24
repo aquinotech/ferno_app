@@ -1,4 +1,4 @@
-import 'package:ferno_app/widgets/menu_widget.dart';
+import 'package:ferno_app/widgets/home_widget.dart';
 import 'package:ferno_app/widgets/products_widget.dart';
 import 'package:ferno_app/widgets/sales_widget.dart';
 import 'package:ferno_app/widgets/settings_widget.dart';
@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
   static List<Widget> _widgetOptions = <Widget>[
-    MenuWidget(),
+    HomeWidget(),
     ProductsWidget(),
     SalesWidget(),
     SettingsWidget(),
@@ -41,24 +41,24 @@ class _HomePageState extends State<HomePage> {
         child: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.widgets),
-              label: 'Menu',
+              icon: Icon(Icons.home, size: 30,),
+              label: 'Home',
               backgroundColor: Color(0xff000000),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.inventory),
               label: 'Produtos',
-                backgroundColor: Color(0xff000000),
+              backgroundColor: Color(0xff000000),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.shop),
               label: 'Vendas',
-                backgroundColor: Color(0xff000000),
+              backgroundColor: Color(0xff000000),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.settings),
               label: 'Configuração',
-                backgroundColor: Color(0xff000000),
+              backgroundColor: Color(0xff000000),
             ),
           ],
           currentIndex: _selectedIndex,
